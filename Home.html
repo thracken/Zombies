@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="zombies.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="left">
+<div id="left-top">
+<img src="zombie.jpg" onclick="zombie_click(1)" width=250px; />
+<p>Zombie Parts:<br /><span id="zombie_parts">0</span></p>
+<p><span id="zkph">0</span><br />kills per hour</p>
+</div><!--left-top-->
+
+<div id="left-bottom">
+<h2>Messages:</h2>
+<div id="messages"></div>
+</div><!--left-bottom-->
+</div><!--left-->
+
+<div id="right">
+<div id="right-top">
+<ul>
+<li id="menu1">Weaponry</li>
+<li id="menu2">Upgrades</li>
+<li id="menu3">Acheivements</li>
+<li id="menu4">Stats</li>
+<li id="menu5">Menu</li>
+</ul>
+</div><!--right-top-->
+
+<div id="right-bottom">
+<div id="weaponry" style="display: none;">
+<table><tr><th></th><th>OWNED</th><th>COST</th><th>ZKpH</th></tr>
+<tr>
+<td><button onClick=building_purchase(1)>Buy a Barricade</button></td>
+<td><span id="spikes">0</span></td>
+<td><span id="spikes_cost">9</span></td>
+<td><span id="spikes_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(2)>Buy a Knife</button></td>
+<td><span id="knives">0</span></td>
+<td><span id="knives_cost">50</span></td>
+<td><span id="knives_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(3)>Buy a Machete</button></td>
+<td><span id="machetes">0</span></td>
+<td><span id="machetes_cost">100</span></td>
+<td><span id="machetes_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(4)>Buy A Walther .22</button></td>
+<td><span id="walthers">0</span></td>
+<td><span id="walthers_cost">500</span></td>
+<td><span id="walthers_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(5)>Buy A Colt .45</button></td>
+<td><span id="colts">0</span></td>
+<td><span id="colts_cost">3,000</span></td>
+<td><span id="colts_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(6)>Buy An MP5</button></td>
+<td><span id="mp5s">0</span></td>
+<td><span id="mp5s_cost">10,000</span></td>
+<td><span id="mp5s_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(7)>Buy An AR-15</button></td>
+<td><span id="ar15s">0</span></td>
+<td><span id="ar15s_cost">40,000</span></td>
+<td><span id="ar15s_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(8)>Buy A Barrett .50</button></td>
+<td><span id="barretts">0</span></td>
+<td><span id="barretts_cost">200,000</span></td>
+<td><span id="barretts_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(9)>Buy An RPG</button></td>
+<td><span id="rpgs">0</span></td>
+<td><span id="rpgs_cost">1,750,000</span></td>
+<td><span id="rpgs_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(10)>Buy A Mortar</button></td>
+<td><span id="mortars">0</span></td>
+<td><span id="mortars_cost">125,000,000</span></td>
+<td><span id="mortars_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(11)>Buy A Assault Humvee</button></td>
+<td><span id="humvees">0</span></td>
+<td><span id="humvees_cost">4,000,000,000</span></td>
+<td><span id="humvees_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(12)>Buy An Apache Helicopter</button></td>
+<td><span id="apaches">0</span></td>
+<td><span id="apaches_cost">50,000,000,000</span></td>
+<td><span id="apaches_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(13)>Buy A Cruiser</button></td>
+<td><span id="cruisers">0</span></td>
+<td><span id="cruisers_cost">600,000,000,000</span></td>
+<td><span id="cruisers_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(14)>Buy An Aircraft Carrier</button></td>
+<td><span id="carriers">0</span></td>
+<td><span id="carriers_cost">3,000,000,000,000</span></td>
+<td><span id="carriers_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(15)>Buy A Nuclear ICBM</button></td>
+<td><span id="nukes">0</span></td>
+<td><span id="nukes_cost">50,000,000,000,000</span></td>
+<td><span id="nukes_zkph">0</span></td>
+</tr>
+<tr>
+<td><button onClick=building_purchase(16)>Buy A ZEUS Satellite</button></td>
+<td><span id="zeus_sats">0</span></td>
+<td><span id="zeus_sats_cost">300,000,000,000,000</span></td>
+<td><span id="zeus_sats_zkph">0</span></td>
+</tr>
+</table>
+</div><!--weaponry-->
+
+<div id="upgrades" style="display: none;">
+<div id="upgrades_content">
+<p>This is the upgrades tab.</p>
+</div><!--upgrades_content-->
+</div><!--upgrades-->
+
+<div id="acheivements" style="display: none;">
+<div id="acheive_content">
+<p>This is the acheivements tab.</p>
+</div><!--acheive_content-->
+</div><!--acheivements-->
+
+<div id="stats" style="display: none;">
+<div id="stats_content">
+<p>This is the stats tab.</p>
+</div><!--stats_content-->
+</div><!--stats-->
+
+<div id="menu" style="display: none;">
+<div id="menu_content">
+<p>This is the menu tab.</p>
+</div><!--menu_content-->
+</div><!--menu-->
+
+</div><!--right-bottom-->
+
+</div><!--right-->
+
+</div><!-- wrapper -->
+</body>
+</html>

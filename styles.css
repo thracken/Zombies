@@ -1,0 +1,116 @@
+/*Zombie Clicker Beta Stylesheet*/
+
+#left
+{
+width: 40%;
+float: left;
+min-height: 500px;
+}
+
+#left-top
+{
+min-height: 300px;
+}
+
+#left-top img
+{
+display: block;
+margin-top: 80px;
+margin-left: auto;
+margin-right: auto;
+cursor:pointer;
+}
+
+#left-top p
+{
+text-align:center;
+}
+
+#zombie_parts
+{
+font-size:35px;
+}
+
+#zkph
+{
+font-size:20px;
+}
+
+#left-bottom
+{}
+
+#left-bottom h2
+{
+text-align:center;
+}
+
+#messages
+{
+height: 250px;
+overflow: auto;
+}
+
+#messages p
+{
+margin: 10px 50px;
+}
+
+#right
+{
+width: 60%;
+float: left;
+min-height: 500px;
+}
+
+#right-top
+{
+height: 20px;
+padding: 20px 0px;
+}
+
+#right-top ul
+{
+width: 100%;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+#right-top li
+{
+display: inline;
+margin: auto 2%;
+text-transform: uppercase;
+float: left;
+cursor:pointer;
+}
+
+#right-bottom
+{
+min-height: 440px;
+}
+
+#weaponry td
+{
+text-align:center;
+}
+
+#weaponry button
+{
+min-width: 200px;
+}
+
+.upgrade
+{
+margin: 5px;
+padding: 2px;
+text-align: center;
+
+width: 160px;
+height: 100px;
+cursor:pointer;
+
+border-style: ridge;
+border-color: #FFA122;
+float: left;
+}
